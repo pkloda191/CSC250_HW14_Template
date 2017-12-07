@@ -16,7 +16,16 @@ public class Patient extends Person implements Comparable<Patient>
 
     public int compareTo(Patient p)
     {
-        return (int)(this.balance - p.balance);
+        if (this.balance < p.balance)
+        {
+            return -1;
+        }
+        else if (this.balance == p.balance)
+        {
+            return 0;
+        }
+        else
+            return 1;
     }
 
     public String toString()
